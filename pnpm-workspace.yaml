@@ -1,0 +1,10 @@
+packages:
+  # all packages in direct subdirs of packages/
+  - 'packages/*'
+  # all packages in subdirs of components/
+  - 'components/**'
+  # 可以自己根据项目情况自己配置，比如 api 表示业务中的所有公共 api
+  - 'api/**'
+  - 'utils/**'
+  # exclude packages that are inside test directories
+  - '!**/test/**'
