@@ -6,5 +6,6 @@ packages:
   # 可以自己根据项目情况自己配置，比如 api 表示业务中的所有公共 api
   - 'api/**'
   - 'utils/**'
+  - 'sandbox/**'
   # exclude packages that are inside test directories
   - '!**/test/**'
