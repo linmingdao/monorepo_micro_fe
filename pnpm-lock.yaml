@@ -14,11 +14,13 @@ importers:
   packages/micro_vue:
     specifiers:
       '@ryuk/api': workspace:^1.0.1
+      '@ryuk/sandbox': workspace:^1.0.1
       '@vitejs/plugin-vue': ^3.2.0
       vite: ^3.2.3
       vue: ^3.2.41
     dependencies:
       '@ryuk/api': link:../../api
+      '@ryuk/sandbox': link:../../sandbox
       vue: 3.2.45
     devDependencies:
       '@vitejs/plugin-vue': 3.2.0_vite@3.2.4+vue@3.2.45
