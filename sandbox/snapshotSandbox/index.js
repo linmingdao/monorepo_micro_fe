@@ -20,7 +20,7 @@ class SnapshotSandbox {
     // this.active();
   }
 
-  //激活
+  // 激活
   active() {
     // 记录当前快照
     this.windowSnapshot = {};
@@ -36,7 +36,7 @@ class SnapshotSandbox {
     this.sandboxRunning = true;
   }
 
-  //还原
+  // 还原
   inactive() {
     this.modifyPropsMap = {};
 

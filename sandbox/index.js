@@ -1,2 +1,2 @@
-export { evalute } from './proxySandbox';
+export { evalute } from './evalutor';
 export { SnapshotSandbox } from './snapshotSandbox';

@@ -6,11 +6,11 @@ import { evalute, SnapshotSandbox } from '@ryuk/sandbox';
 createApp(App).mount('#app');
 
 function testEvalute() {
-  // const a = evalute('1+2');
-  // console.log(a);
-  // evalute('console.log(1)');
-  // console.log(evalute('let c=2;let a=c+1;d = 1;window.xxx = 123;return a;'));
-  // console.log(c);
+  const a = evalute('1+2');
+  console.log(a);
+  evalute('console.log(1)');
+  console.log(evalute('let c=2;let a=c+1;d = 1;window.xxx = 123;return a;'));
+  console.log(c);
 }
 
 function testSnapshotSandbox() {
@@ -26,3 +26,6 @@ function testSnapshotSandbox() {
   sandbox.active(); // 激活
   console.log(window.xname, window.xage); // 张三,18
 }
+
+// testEvalute();
+// testSnapshotSandbox();
