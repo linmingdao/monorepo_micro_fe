@@ -15,9 +15,9 @@ class SnapshotSandbox {
     this.name = name;
     this.type = 'Snapshot';
     this.sandboxRunning = true;
+
     this.windowSnapshot = {};
     this.modifyPropsMap = {};
-    // this.active();
   }
 
   // 激活
