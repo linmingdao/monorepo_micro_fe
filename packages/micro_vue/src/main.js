@@ -1,7 +1,7 @@
 import { createApp } from 'vue';
 import './style.css';
 import App from './App.vue';
-import { evalute, SnapshotSandbox } from '@ryuk/sandbox';
+import { evalute, LegacySandbox, SnapshotSandbox } from '@ryuk/sandbox';
 
 createApp(App).mount('#app');
 
@@ -29,5 +29,22 @@ function testSnapshotSandbox() {
   console.log(window.xname, window.xage); // 张三,18
 }
 
+function testLegacySandbox() {
+  window.xcity = 'Beijing';
+  console.log(window.xcity);
+
+  const legacySandbox = new LegacySandbox();
+  legacySandbox.active();
+  legacySandbox.proxy.xcity = 'Shanghai';
+  console.log(window.xcity);
+
+  legacySandbox.inactive();
+  console.log(window.xcity);
+
+  legacySandbox.active();
+  console.log(window.xcity);
+}
+
 // testEvalute();
 // testSnapshotSandbox();
+testLegacySandbox();
