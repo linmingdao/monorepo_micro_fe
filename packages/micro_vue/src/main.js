@@ -15,15 +15,18 @@ function testEvalute() {
 
 function testSnapshotSandbox() {
   console.log(window.xname, window.xage); // undefined,undefined
+
   // 进入微应用
   const sandbox = new SnapshotSandbox();
   sandbox.active();
   window.xname = '张三';
   window.xage = 18;
   console.log(window.xname, window.xage); // 张三,18
+
   // 退出微应用
   sandbox.inactive(); // 还原
   console.log(window.xname, window.xage); // undefined,undefined
+
   // 进入微应用
   sandbox.active(); // 激活
   console.log(window.xname, window.xage); // 张三,18
@@ -47,4 +50,4 @@ function testLegacySandbox() {
 
 // testEvalute();
 // testSnapshotSandbox();
-testLegacySandbox();
+// testLegacySandbox();

@@ -9,8 +9,6 @@ class LegacySandbox {
     this.sandboxRunning = true;
     this.globalContext = globalContext;
 
-    this.proxy = null;
-
     // 持续记录对全局环境的更新操作（新增 和 修改）
     this.currentUpdatePropsValueMap = new Map();
     // 沙箱期间新增的全局变量
