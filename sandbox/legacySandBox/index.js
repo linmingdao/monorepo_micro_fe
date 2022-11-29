@@ -34,6 +34,7 @@ class LegacySandbox {
         this.currentUpdatePropsValueMap.set(p, value);
 
         if (sync2Window) {
+          // 必须重新设置 window 对象保证下次 get 时能拿到已更新的数据
           rawWindow[p] = value;
         }
 
