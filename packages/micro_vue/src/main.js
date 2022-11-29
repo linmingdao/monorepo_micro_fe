@@ -7,6 +7,7 @@ import {
   SnapshotSandbox,
   ProxySandbox,
 } from '@ryuk/sandbox';
+import vm from 'vm-browserify';
 
 createApp(App).mount('#app');
 
@@ -83,3 +84,11 @@ function testProxySandbox() {
 // testSnapshotSandbox();
 // testLegacySandbox();
 // testProxySandbox();
+
+var res = vm.runInNewContext(
+  'function test (a) {window.xageage = 111; console.log(window);return a + 5} test(a)',
+  {
+    a: 100,
+  },
+);
+console.log(res);
