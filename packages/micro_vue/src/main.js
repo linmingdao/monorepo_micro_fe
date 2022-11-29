@@ -1,7 +1,12 @@
 import { createApp } from 'vue';
 import './style.css';
 import App from './App.vue';
-import { evalute, LegacySandbox, SnapshotSandbox } from '@ryuk/sandbox';
+import {
+  evalute,
+  LegacySandbox,
+  SnapshotSandbox,
+  ProxySandbox,
+} from '@ryuk/sandbox';
 
 createApp(App).mount('#app');
 
@@ -48,6 +53,33 @@ function testLegacySandbox() {
   console.log(window.xcity);
 }
 
+function testProxySandbox() {
+  window.xage = 11;
+
+  const proxySandbox01 = new ProxySandbox();
+  const proxySandbox02 = new ProxySandbox();
+  proxySandbox01.active();
+  proxySandbox02.active();
+  proxySandbox01.proxyWindow.xage = 100;
+  proxySandbox02.proxyWindow.xage = 200;
+
+  console.log(
+    window.xage,
+    proxySandbox01.proxyWindow.xage,
+    proxySandbox02.proxyWindow.xage,
+  );
+
+  proxySandbox01.inactive();
+  proxySandbox02.inactive();
+
+  console.log(
+    window.xage,
+    proxySandbox01.proxyWindow.xage,
+    proxySandbox02.proxyWindow.xage,
+  );
+}
+
 // testEvalute();
 // testSnapshotSandbox();
 // testLegacySandbox();
+// testProxySandbox();

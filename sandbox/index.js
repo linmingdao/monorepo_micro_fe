@@ -1,3 +1,4 @@
 export { evalute } from './evalutor';
-export { SnapshotSandbox } from './snapshotSandbox';
+export { ProxySandbox } from './proxySandbox';
 export { LegacySandbox } from './legacySandBox';
+export { SnapshotSandbox } from './snapshotSandbox';
