@@ -80,15 +80,24 @@ function testProxySandbox() {
   );
 }
 
+function testVmBrowserify() {
+  const code = `
+  function test(a) {
+    window.xageage = 111;
+    console.log('sandbox inner:', window);
+    return a + 5;
+  }
+  test(a);
+  console.log('sandbox inner:', window.xageage);
+  // 如果最后一个是表达式 或者 函数调用有返回值，那么会给外部调用者（即会赋值给 res）
+  3;
+  `;
+  var res = vm.runInNewContext(code, { a: 100 });
+  console.log('outter:', res);
+}
+
 // testEvalute();
 // testSnapshotSandbox();
 // testLegacySandbox();
 // testProxySandbox();
-
-var res = vm.runInNewContext(
-  'function test (a) {window.xageage = 111; console.log(window);return a + 5} test(a)',
-  {
-    a: 100,
-  },
-);
-console.log(res);
+// testVmBrowserify();
