@@ -11,6 +11,7 @@
   "dependencies": {
     "@ryuk/api": "workspace:^1.0.1",
     "@ryuk/sandbox": "workspace:^1.0.1",
+    "@ryuk/storage": "workspace:^1.0.0",
     "vm-browserify": "^1.1.2",
     "vue": "^3.2.41"
   },

@@ -15,6 +15,7 @@ importers:
     specifiers:
       '@ryuk/api': workspace:^1.0.1
       '@ryuk/sandbox': workspace:^1.0.1
+      '@ryuk/storage': workspace:^1.0.0
       '@vitejs/plugin-vue': ^3.2.0
       vite: ^3.2.3
       vm-browserify: ^1.1.2
@@ -22,6 +23,7 @@ importers:
     dependencies:
       '@ryuk/api': link:../../api
       '@ryuk/sandbox': link:../../sandbox
+      '@ryuk/storage': link:../../storage
       vm-browserify: 1.1.2
       vue: 3.2.45
     devDependencies:

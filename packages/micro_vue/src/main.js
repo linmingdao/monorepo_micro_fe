@@ -8,6 +8,7 @@ import {
   ProxySandbox,
 } from '@ryuk/sandbox';
 import vm from 'vm-browserify';
+import { testIndexedDB } from '@ryuk/storage';
 
 createApp(App).mount('#app');
 
@@ -101,3 +102,4 @@ function testVmBrowserify() {
 // testLegacySandbox();
 // testProxySandbox();
 // testVmBrowserify();
+testIndexedDB();

@@ -1,0 +1,1 @@
+export { testIndexedDB } from './IndexedDB';
