@@ -7,5 +7,6 @@ packages:
   - 'api/**'
   - 'utils/**'
   - 'sandbox/**'
+  - 'storage/**'
   # exclude packages that are inside test directories
   - '!**/test/**'
