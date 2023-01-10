@@ -102,4 +102,4 @@ function testVmBrowserify() {
 // testLegacySandbox();
 // testProxySandbox();
 // testVmBrowserify();
-testIndexedDB();
+// testIndexedDB();
