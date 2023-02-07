@@ -34,7 +34,7 @@ function workLoop(deadline) {
 
   // 如果没有剩余时间，需要放弃执行任务的控制权，将控制权交给浏览器（等待浏览器下一次空闲时间继续执行任务）
   if (works.length) {
-    requestIdleCallback(workLoop);
+    requestIdleCallback(workLoop, { timeout: 1000 });
   }
 }
 
